@@ -16,16 +16,16 @@ public class FlashlightPatch
             case 0: //Pro
                 if (used)
                 {
-                    __instance.insertedBattery.charge = Mathf.Clamp(__instance.insertedBattery.charge - Config.Instance.ProFlashlightBatteryBurst.Value, 0f, 1f);
+                    __instance.insertedBattery.charge = Mathf.Clamp(__instance.insertedBattery.charge - FlashlightBatteryTweak.MyConfig.ProFlashlightBatteryBurst.Value, 0f, 1f);
                 }
-                __instance.itemProperties.batteryUsage = Config.Instance.ProFlashlightBatteryUsage.Value;
+                __instance.itemProperties.batteryUsage = FlashlightBatteryTweak.MyConfig.ProFlashlightBatteryUsage.Value;
                 break;
             case 1: //Regular
                 if (used)
                 {
-                    __instance.insertedBattery.charge = Mathf.Clamp(__instance.insertedBattery.charge - Config.Instance.FlashlightBatteryBurst.Value, 0f, 1f);
+                    __instance.insertedBattery.charge = Mathf.Clamp(__instance.insertedBattery.charge - FlashlightBatteryTweak.MyConfig.FlashlightBatteryBurst.Value, 0f, 1f);
                 }
-                __instance.itemProperties.batteryUsage = Config.Instance.FlashlightBatteryUsage.Value;
+                __instance.itemProperties.batteryUsage = FlashlightBatteryTweak.MyConfig.FlashlightBatteryUsage.Value;
                 break;
         }
     }

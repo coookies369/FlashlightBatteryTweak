@@ -16,7 +16,7 @@ public class FlashlightBatteryTweak : BaseUnityPlugin
     public static FlashlightBatteryTweak Instance { get; private set; } = null!;
     internal new static ManualLogSource Logger { get; private set; } = null!;
     internal static Harmony? Harmony { get; set; }
-    public static Config MyConfig { get; internal set; }
+    internal static new Config MyConfig;
 
     private void Awake()
     {

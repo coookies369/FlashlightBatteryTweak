@@ -4,20 +4,32 @@ using CSync.Util;
 using System.Runtime.Serialization;
 
 [DataContract]
-public class Config : SyncedConfig<Config>
+public class Config : SyncedConfig2<Config>
 {
-        [DataMember] public SyncedEntry<float> ProFlashlightBatteryUsage { get; private set; }
-        [DataMember] public SyncedEntry<float> ProFlashlightBatteryBurst { get; private set; }
-        [DataMember] public SyncedEntry<float> FlashlightBatteryUsage { get; private set; }
-        [DataMember] public SyncedEntry<float> FlashlightBatteryBurst { get; private set; }
+        [SyncedEntryField] public SyncedEntry<float> ProFlashlightBatteryUsage;
+        [SyncedEntryField] public SyncedEntry<float> ProFlashlightBatteryBurst;
+        [SyncedEntryField] public SyncedEntry<float> FlashlightBatteryUsage;
+        [SyncedEntryField] public SyncedEntry<float> FlashlightBatteryBurst;
 
         public Config(ConfigFile cfg) : base(FlashlightBatteryTweak.MyPluginInfo.PLUGIN_GUID)
         {
-                ConfigManager.Register(this);
+                ProFlashlightBatteryUsage = cfg.BindSyncedEntry(
+                        new ConfigDefinition("ProFlashlight", "ProFlashlightBatteryUsage"),
+                        360f,
+                        new ConfigDescription("How much battery is drained while active. Counterintuitively, higher numbers drain slower. Vanilla is 300"));
+                ProFlashlightBatteryBurst = cfg.BindSyncedEntry(
+                        new ConfigDefinition("ProFlashlight", "ProFlashlightBatteryBurst"),
+                        0.05f,
+                        new ConfigDescription("What percentage of the battery is drained when turning the flashlight on"));
+                FlashlightBatteryUsage = cfg.BindSyncedEntry(
+                        new ConfigDefinition("Flashlight", "FlashlightBatteryUsage"),
+                        186f,
+                        new ConfigDescription("How much battery is drained while active. Counterintuitively, higher numbers drain slower. Vanilla is 140"));
+                FlashlightBatteryBurst = cfg.BindSyncedEntry(
+                        new ConfigDefinition("Flashlight", "FlashlightBatteryBurst"),
+                        0.03f,
+                        new ConfigDescription("What percentage of the battery is drained when turning the flashlight on"));
 
-                ProFlashlightBatteryUsage = cfg.BindSyncedEntry("ProFlashlight", "ProFlashlightBatteryUsage", 360f, "How much battery is drained while active. Counterintuitively, higher numbers drain slower. Vanilla is 300");
-                ProFlashlightBatteryBurst = cfg.BindSyncedEntry("ProFlashlight", "ProFlashlightBatteryBurst", 0.05f, "What percentage of the battery is drained when turning the flashlight on");
-                FlashlightBatteryUsage = cfg.BindSyncedEntry("Flashlight", "FlashlightBatteryUsage", 186f, "How much battery is drained while active. Counterintuitively, higher numbers drain slower. Vanilla is 140");
-                FlashlightBatteryBurst = cfg.BindSyncedEntry("Flashlight", "FlashlightBatteryBurst", 0.03f, "What percentage of the battery is drained when turning the flashlight on");
+                ConfigManager.Register(this);
         }
 }
