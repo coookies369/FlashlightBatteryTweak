@@ -6,10 +6,10 @@ This mod aims to make flashlights less annoying to use maybe. Flashlights usuall
 
 ### Pro Flashlight
 
-* **ProFlashlightBatteryUsage:** How much battery is drained while active. Counterintuitively, higher numbers drain slower. *Vanilla: 300 Default: 360*
+* **ProFlashlightBatteryUsage:** How long it takes for the battery to be drained in seconds. *Vanilla: 300 Default: 360*
 * **ProFlashlightBatteryBurst:** What percentage of the battery is drained when turning the flashlight on. *Default: 0.05*
 
 ### Flashlight
 
-* **FlashlightBatteryUsage:** How much battery is drained while active. Counterintuitively, higher numbers drain slower. *Vanilla: 140 Default: 186*
+* **FlashlightBatteryUsage:** How long it takes for the battery to be drained in seconds. *Vanilla: 140 Default: 186*
 * **FlashlightBatteryBurst:** What percentage of the battery is drained when turning the flashlight on. *Default: 0.03*
