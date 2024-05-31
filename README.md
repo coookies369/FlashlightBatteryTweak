@@ -11,5 +11,5 @@ This mod aims to make flashlights less annoying to use maybe. Flashlights usuall
 
 ### Flashlight
 
-* **FlashlightBatteryUsage:** How long it takes for the battery to be drained in seconds. *Vanilla: 140 Default: 186*
+* **FlashlightBatteryUsage:** How long it takes for the battery to be drained in seconds. *Vanilla: 140 Default: 180*
 * **FlashlightBatteryBurst:** What percentage of the battery is drained when turning the flashlight on. *Default: 0.03*

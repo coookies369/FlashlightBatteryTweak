@@ -23,7 +23,7 @@ public class Config : SyncedConfig2<Config>
                         new ConfigDescription("What percentage of the battery is drained when turning the flashlight on"));
                 FlashlightBatteryUsage = cfg.BindSyncedEntry(
                         new ConfigDefinition("Flashlight", "FlashlightBatteryUsage"),
-                        186f,
+                        180f,
                         new ConfigDescription("How long it takes for the battery to be drained in seconds. Vanilla is 140"));
                 FlashlightBatteryBurst = cfg.BindSyncedEntry(
                         new ConfigDefinition("Flashlight", "FlashlightBatteryBurst"),
