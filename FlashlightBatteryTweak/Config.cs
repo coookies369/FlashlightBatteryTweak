@@ -16,7 +16,7 @@ public class Config : SyncedConfig2<Config>
                 ProFlashlightBatteryUsage = cfg.BindSyncedEntry(
                         new ConfigDefinition("ProFlashlight", "ProFlashlightBatteryUsage"),
                         360f,
-                        new ConfigDescription("How much battery is drained while active. Counterintuitively, higher numbers drain slower. Vanilla is 300"));
+                        new ConfigDescription("How long it takes for the battery to be drained in seconds. Vanilla is 300"));
                 ProFlashlightBatteryBurst = cfg.BindSyncedEntry(
                         new ConfigDefinition("ProFlashlight", "ProFlashlightBatteryBurst"),
                         0.05f,
@@ -24,7 +24,7 @@ public class Config : SyncedConfig2<Config>
                 FlashlightBatteryUsage = cfg.BindSyncedEntry(
                         new ConfigDefinition("Flashlight", "FlashlightBatteryUsage"),
                         186f,
-                        new ConfigDescription("How much battery is drained while active. Counterintuitively, higher numbers drain slower. Vanilla is 140"));
+                        new ConfigDescription("How long it takes for the battery to be drained in seconds. Vanilla is 140"));
                 FlashlightBatteryBurst = cfg.BindSyncedEntry(
                         new ConfigDefinition("Flashlight", "FlashlightBatteryBurst"),
                         0.03f,
