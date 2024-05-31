@@ -1,6 +1,6 @@
 # Flashlight Battery Tweak
 
-This mod aims to make flashlights less annoying to use maybe. Flashlights usually drain at a constant rate, which means the best way to use them is to breifly flick them on and then off again to see what's in front of you. This mod adds a "burst" of energy consumption every time the flashlight is turned on, and decreases the consumption rate of power slightly to compensate.
+This mod aims to make flashlight usage more interesting. Flashlights usually drain at a constant rate, which means the best way to use them is to breifly flick them on and then off again to see what's in front of you. This mod adds a "burst" of energy consumption every time the flashlight is turned on, but decreases the power consumption rate slightly to compensate.
 
 ## Configs
 

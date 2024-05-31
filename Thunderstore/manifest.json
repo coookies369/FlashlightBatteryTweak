@@ -1,6 +1,6 @@
 {
     "name": "FlashlightBatteryTweak",
-    "description": "Possibly makes flashlights less annoying to use",
+    "description": "Makes flashlight usage more interesting",
     "version_number": "1.1.0",
     "dependencies": [
         "BepInEx-BepInExPack-5.4.2100",
